@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  repair-shop:
+    build: { context: ., args: { THEME_NAME: "Quantum Repairs" } }
+    ports: ["3000:3000"]
+    volumes:
+      - ./central_logs:/app/logs
+
+  market:
+    build: { context: ., args: { THEME_NAME: "Neo-Market" } }
+    ports: ["3001:3000"]
+    volumes:
+      - ./central_logs:/app/logs
+
+  mall:
+    build: { context: ., args: { THEME_NAME: "Cyber Plaza Mall" } }
+    ports: ["3002:3000"]
+    volumes:
+      - ./central_logs:/app/logs
+
+  banking:
+    build: { context: ., args: { THEME_NAME: "Nexus Banking" } }
+    ports: ["3003:3000"]
+    volumes:
+      - ./central_logs:/app/logs
+
+  logistics:
+    build: { context: ., args: { THEME_NAME: "Aether Logistics" } }
+    ports: ["3004:3000"]
+    volumes:
+      - ./central_logs:/app/logs
+
+  gym:
+    build: { context: ., args: { THEME_NAME: "Titan Gyms" } }
+    ports: ["3005:3000"]
+    volumes:
+      - ./central_logs:/app/logs
+
+  bistro:
+    build: { context: ., args: { THEME_NAME: "Stellar Bistro" } }
+    ports: ["3006:3000"]
+    volumes:
+      - ./central_logs:/app/logs
+
+  real-estate:
+    build: { context: ., args: { THEME_NAME: "Vertex Real Estate" } }
+    ports: ["3007:3000"]
+    volumes:
+      - ./central_logs:/app/logs
+
+  insurance:
+    build: { context: ., args: { THEME_NAME: "Orbit Insurance" } }
+    ports: ["3008:3000"]
+    volumes:
+      - ./central_logs:/app/logs
+
+  security:
+    build: { context: ., args: { THEME_NAME: "Zenith Security" } }
+    ports: ["3009:3000"]
+    volumes:
+      - ./central_logs:/app/logs
